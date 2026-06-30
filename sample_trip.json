@@ -1,0 +1,62 @@
+{
+  "trip": {
+    "trip_title": "台北 3日間",
+    "travelers": "池田 + 2名",
+    "start_date": "2026-07-10",
+    "end_date": "2026-07-12",
+    "timezone": "Asia/Taipei",
+    "currency": "TWD",
+    "emergency_contact": "現地ガイド 0912-345-678"
+  },
+  "flights": [
+    {
+      "flight_no": "BR/192-A;K",
+      "airline": "EVA Air",
+      "dep_airport": "KIX 関西",
+      "arr_airport": "TPE 桃園",
+      "dep_datetime": "2026-07-10 09:30",
+      "arr_datetime": "2026-07-10 11:40",
+      "pnr": "X7Q-2M/熊",
+      "seat": "32A",
+      "terminal_gate": "T1 / Gate 24",
+      "note": "受託手荷物 23kg×1"
+    }
+  ],
+  "hotels": [
+    {
+      "name": "Hotel 大安",
+      "address": "台北市大安区信義路四段",
+      "checkin_datetime": "2026-07-10 15:00",
+      "checkout_datetime": "2026-07-12 11:00",
+      "booking_no": "BK-2026/0710-TP;9",
+      "phone": "+886-2-1234-5678",
+      "map_query": "Hotel 大安 台北",
+      "nearby_food_keywords": ["居酒屋", "イタリアン"],
+      "note": "MRT 大安駅 徒歩3分"
+    }
+  ],
+  "places": [
+    {
+      "name": "国立故宮博物院",
+      "category": "観光",
+      "lat": "25.1023",
+      "lng": "121.5485",
+      "planned_datetime": "2026-07-11 10:00",
+      "stay_minutes": 150,
+      "route_from": "Hotel 大安 台北",
+      "note": "月曜以外開館"
+    },
+    {
+      "name": "九份老街",
+      "category": "観光",
+      "map_query": "九份老街",
+      "planned_datetime": "2026-07-11 15:30",
+      "route_from": "国立故宮博物院",
+      "note": "夕景がおすすめ（要直前確認）"
+    }
+  ],
+  "dining": [
+    { "label": "鼎泰豐 信義店", "genre": "小籠包", "map_query": "鼎泰豐 信義 台北", "status": "要直前確認" },
+    { "label": "ホテル周辺イタリアン", "genre": "イタリアン", "map_query": "大安 イタリアン", "status": "要直前確認" }
+  ]
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>台北 3日間</title>
+<style>
+:root{
+  --ink:#13183a; --ink-2:#2b3566; --paper:#f7f4ee; --card:#ffffff;
+  --line:#e4ded2; --muted:#6b6f80; --coral:#ef6b4d; --coral-d:#d2502f;
+  --teal:#1f7a78; --gold:#c79a3a; --shadow:0 1px 0 rgba(19,24,58,.04),0 10px 24px -16px rgba(19,24,58,.35);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.6;-webkit-text-size-adjust:100%}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 64px}
+a{color:inherit}
+code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+
+/* hero */
+.hero{background:linear-gradient(160deg,#1a2050 0%,#13183a 55%,#0e1230 100%);
+  color:#fff;margin:0 -18px 28px;padding:42px 26px 34px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;
+  border-radius:50%;background:radial-gradient(circle,rgba(239,107,77,.5),transparent 70%)}
+.hero .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#aeb4e0;margin:0 0 10px}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:600;font-size:34px;line-height:1.15;margin:0 0 14px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:#d8dbf2}
+.hero .meta b{color:#fff;font-weight:600}
+
+/* section */
+.sec{margin:34px 0 0}
+.sec > h2{display:flex;align-items:baseline;gap:10px;font-size:13px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-2);margin:0 0 14px;font-weight:700}
+.sec > h2::before{content:"";flex:0 0 22px;height:2px;background:var(--coral);transform:translateY(-4px)}
+
+/* ticket card */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  box-shadow:var(--shadow);padding:16px 18px;margin:0 0 14px;position:relative}
+.card::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:4px;border-radius:4px;background:var(--coral)}
+.card.hotel::before{background:var(--teal)} .card.place::before{background:var(--gold)}
+.card .title{font-weight:700;font-size:17px;margin:0 0 2px;padding-left:8px}
+.card .sub{color:var(--muted);font-size:13.5px;margin:0 0 10px;padding-left:8px}
+.row{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px;padding-left:8px;margin:2px 0}
+.row .k{color:var(--muted);min-width:78px}
+.row .v{font-weight:500}
+.code{display:inline-block;background:#f1eee6;border:1px solid var(--line);border-radius:6px;
+  padding:1px 7px;font-size:13px}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 2px;padding-left:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;text-decoration:none;
+  border:1px solid var(--coral);color:var(--coral-d);background:#fff;
+  border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600;transition:background .15s,color .15s}
+.chip:hover,.chip:focus-visible{background:var(--coral);color:#fff}
+.chip.teal{border-color:var(--teal);color:var(--teal)} .chip.teal:hover,.chip.teal:focus-visible{background:var(--teal);color:#fff}
+.chip.ink{border-color:var(--ink-2);color:var(--ink-2)} .chip.ink:hover,.chip.ink:focus-visible{background:var(--ink-2);color:#fff}
+
+.badge{display:inline-block;background:#fde7e2;color:var(--coral-d);border:1px solid #f6c9bd;
+  border-radius:6px;padding:1px 8px;font-size:12px;font-weight:700;margin-left:6px}
+.note{color:var(--muted);font-size:13px;padding-left:8px;margin-top:8px}
+.empty{color:var(--muted);font-size:14px;font-style:italic;padding-left:8px}
+.foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:space-between}
+a:focus-visible,.chip:focus-visible{outline:2px solid var(--ink-2);outline-offset:2px}
+@media (max-width:480px){.hero h1{font-size:27px}.wrap{padding:0 14px 56px}.hero{padding:34px 18px 28px;margin:0 -14px 24px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Travel Itinerary</p>
+  <h1>台北 3日間</h1>
+  <div class="meta"><span><b>2026-07-10 – 2026-07-12</b></span><span>池田 + 2名</span><span>TZ Asia/Taipei</span><span>TWD</span></div>
+  <div class="chips" style="padding-left:0;margin-top:16px"><a class="chip" download="trip.ics" href="data:text/calendar;base64,QkVHSU46VkNBTEVOREFSDQpWRVJTSU9OOjIuMA0KUFJPRElEOi0vL3NoaW9yaV9nZW4vL0pQLy8xLjAvL0VODQpDQUxTQ0FMRTpHUkVHT1JJQU4NCkJFR0lOOlZFVkVOVA0KVUlEOmZsaWdodC0xQHNoaW9yaQ0KRFRTVEFNUDoyMDI2MDYzMFQxMzI5MTlaDQpEVFNUQVJUOjIwMjYwNzEwVDAxMzAwMFoNClNVTU1BUlk64pyIIEJSLzE5Mi1BXDtLIOWHuueZuiBLSVgg6Zai6KW/4oaSVFBFIOahg+Wckg0KTE9DQVRJT046S0lYIOmWouilvw0KRU5EOlZFVkVOVA0KQkVHSU46VkVWRU5UDQpVSUQ6ZmxpZ2h0LTJAc2hpb3JpDQpEVFNUQU1QOjIwMjYwNjMwVDEzMjkxOVoNCkRUU1RBUlQ6MjAyNjA3MTBUMDM0MDAwWg0KU1VNTUFSWTrinIggQlIvMTkyLUFcO0sg5Yiw552AIEtJWCDplqLopb/ihpJUUEUg5qGD5ZySDQpMT0NBVElPTjpUUEUg5qGD5ZySDQpFTkQ6VkVWRU5UDQpCRUdJTjpWRVZFTlQNClVJRDpob3RlbC0zQHNoaW9yaQ0KRFRTVEFNUDoyMDI2MDYzMFQxMzI5MTlaDQpEVFNUQVJUOjIwMjYwNzEwVDA3MDAwMFoNClNVTU1BUlk68J+PqCBIb3RlbCDlpKflrokg44OB44Kn44OD44Kv44Kk44OzDQpMT0NBVElPTjrlj7DljJfluILlpKflronljLrkv6Hnvqnot6/lm5vmrrUNCkVORDpWRVZFTlQNCkJFR0lOOlZFVkVOVA0KVUlEOmhvdGVsLTRAc2hpb3JpDQpEVFNUQU1QOjIwMjYwNjMwVDEzMjkxOVoNCkRUU1RBUlQ6MjAyNjA3MTJUMDMwMDAwWg0KU1VNTUFSWTrwn4+oIEhvdGVsIOWkp+WuiSDjg4Hjgqfjg4Pjgq/jgqLjgqbjg4gNCkxPQ0FUSU9OOuWPsOWMl+W4guWkp+WuieWMuuS/oee+qei3r+Wbm+autQ0KRU5EOlZFVkVOVA0KQkVHSU46VkVWRU5UDQpVSUQ6cGxhY2UtNUBzaGlvcmkNCkRUU1RBTVA6MjAyNjA2MzBUMTMyOTE5Wg0KRFRTVEFSVDoyMDI2MDcxMVQwMjAwMDBaDQpTVU1NQVJZOvCfk40g5Zu956uL5pWF5a6u5Y2a54mp6ZmiDQpERVNDUklQVElPTjrmnIjmm5zku6XlpJbplovppKgNCkVORDpWRVZFTlQNCkJFR0lOOlZFVkVOVA0KVUlEOnBsYWNlLTZAc2hpb3JpDQpEVFNUQU1QOjIwMjYwNjMwVDEzMjkxOVoNCkRUU1RBUlQ6MjAyNjA3MTFUMDczMDAwWg0KU1VNTUFSWTrwn5ONIOS5neS7veiAgeihlw0KTE9DQVRJT0465Lmd5Lu96ICB6KGXDQpERVNDUklQVElPTjrlpJXmma/jgYzjgYrjgZnjgZnjgoHvvIjopoHnm7TliY3norroqo3vvIkNCkVORDpWRVZFTlQNCkVORDpWQ0FMRU5EQVINCg==">カレンダーに追加 (.ics)</a></div>
+</header>
+<main class="wrap">
+<section class="sec"><h2>Flights ✈</h2><div class="card flight"><div class="title"><span class="code mono">BR/192-A;K</span></div><div class="sub">EVA Air</div><div class="row"><span class="k">区間</span><span class="v">KIX 関西 → TPE 桃園</span></div><div class="row"><span class="k">出発</span><span class="v">2026-07-10 09:30</span></div><div class="row"><span class="k">到着</span><span class="v">2026-07-10 11:40</span></div><div class="row"><span class="k">PNR</span><span class="v code mono">X7Q-2M/熊</span></div><div class="row"><span class="k">座席</span><span class="v">32A</span></div><div class="row"><span class="k">ターミナル</span><span class="v">T1 / Gate 24</span></div><div class="note">受託手荷物 23kg×1</div></div></section><section class="sec"><h2>Hotels 🏨</h2><div class="card hotel"><div class="title">Hotel 大安</div><div class="sub">台北市大安区信義路四段</div><div class="row"><span class="k">IN</span><span class="v">2026-07-10 15:00</span></div><div class="row"><span class="k">OUT</span><span class="v">2026-07-12 11:00</span></div><div class="row"><span class="k">予約番号</span><span class="v code mono">BK-2026/0710-TP;9</span></div><div class="row"><span class="k">電話</span><span class="v">+886-2-1234-5678</span></div><div class="note">MRT 大安駅 徒歩3分</div><div class="chips"><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel%20%E5%A4%A7%E5%AE%89%20%E5%8F%B0%E5%8C%97" target="_blank" rel="noopener">地図</a><a class="chip ink" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel%20%E5%A4%A7%E5%AE%89%20%E5%B1%85%E9%85%92%E5%B1%8B" target="_blank" rel="noopener">周辺の居酒屋</a><a class="chip ink" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel%20%E5%A4%A7%E5%AE%89%20%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2%E3%83%B3" target="_blank" rel="noopener">周辺のイタリアン</a></div></div></section><section class="sec"><h2>Places 📍</h2><div class="card place"><div class="title">国立故宮博物院</div><div class="sub">観光</div><div class="row"><span class="k">予定</span><span class="v">2026-07-11 10:00</span></div><div class="row"><span class="k">滞在(分)</span><span class="v">150</span></div><div class="note">月曜以外開館</div><div class="chips"><a class="chip " href="https://www.google.com/maps/dir/?api=1&amp;destination=25.1023%2C121.5485&amp;origin=Hotel%20%E5%A4%A7%E5%AE%89%20%E5%8F%B0%E5%8C%97" target="_blank" rel="noopener">経路</a><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=25.1023%2C121.5485" target="_blank" rel="noopener">地図</a></div></div><div class="card place"><div class="title">九份老街</div><div class="sub">観光</div><div class="row"><span class="k">予定</span><span class="v">2026-07-11 15:30</span></div><div class="note">夕景がおすすめ（要直前確認）</div><div class="chips"><a class="chip " href="https://www.google.com/maps/dir/?api=1&amp;destination=%E4%B9%9D%E4%BB%BD%E8%80%81%E8%A1%97&amp;origin=%E5%9B%BD%E7%AB%8B%E6%95%85%E5%AE%AE%E5%8D%9A%E7%89%A9%E9%99%A2" target="_blank" rel="noopener">経路</a><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B9%9D%E4%BB%BD%E8%80%81%E8%A1%97" target="_blank" rel="noopener">地図</a></div></div></section><section class="sec"><h2>Dining 🍶</h2><div class="card"><div class="title">鼎泰豐 信義店<span class="badge">要直前確認</span></div><div class="sub">小籠包</div><div class="chips"><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%BC%8E%E6%B3%B0%E8%B1%90%20%E4%BF%A1%E7%BE%A9%20%E5%8F%B0%E5%8C%97" target="_blank" rel="noopener">地図検索</a></div></div><div class="card"><div class="title">ホテル周辺イタリアン<span class="badge">要直前確認</span></div><div class="sub">イタリアン</div><div class="chips"><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E5%AE%89%20%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2%E3%83%B3" target="_blank" rel="noopener">地図検索</a></div></div></section>
+<div class="foot"><span>変動情報（料金・営業時間等）は要直前確認</span><span>緊急連絡先: 現地ガイド 0912-345-678</span><span>generated by shiori_gen v1.0.0</span></div>
+</main>
+</body>
+</html>
