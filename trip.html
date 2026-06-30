@@ -6,64 +6,82 @@
 <title>東京 2026年7月</title>
 <style>
 :root{
-  --ink:#13183a; --ink-2:#2b3566; --paper:#f7f4ee; --card:#ffffff;
-  --line:#e4ded2; --muted:#6b6f80; --coral:#ef6b4d; --coral-d:#d2502f;
-  --teal:#1f7a78; --gold:#c79a3a; --shadow:0 1px 0 rgba(19,24,58,.04),0 10px 24px -16px rgba(19,24,58,.35);
+  --ink:#5b4a54; --ink-soft:#9a8690; --paper:#fff6f4; --card:#ffffff;
+  --line:#f6e2e2; --pink:#ff8fab; --pink-d:#e76a8d; --peach:#ffb39a;
+  --mint:#7fd1bd; --mint-d:#3aa48f; --lav:#b9a7e6; --lav-d:#8a73c9; --gold:#ffcf5e;
+  --shadow:0 2px 0 rgba(231,106,141,.05),0 16px 32px -20px rgba(231,106,141,.55);
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Hiragino Sans","Noto Sans JP",sans-serif;
-  line-height:1.6;-webkit-text-size-adjust:100%}
-.wrap{max-width:760px;margin:0 auto;padding:0 18px 64px}
+body{margin:0;background:
+  radial-gradient(1200px 420px at 80% -120px, #ffe3ec 0%, transparent 60%),
+  var(--paper);
+  color:var(--ink);
+  font-family:"Hiragino Maru Gothic ProN","ヒラギノ丸ゴ ProN",system-ui,-apple-system,
+    "Segoe UI",Roboto,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.7;-webkit-text-size-adjust:100%}
+.wrap{max-width:740px;margin:0 auto;padding:0 18px 72px}
 a{color:inherit}
 code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 
 /* hero */
-.hero{background:linear-gradient(160deg,#1a2050 0%,#13183a 55%,#0e1230 100%);
-  color:#fff;margin:0 -18px 28px;padding:42px 26px 34px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;
-  border-radius:50%;background:radial-gradient(circle,rgba(239,107,77,.5),transparent 70%)}
-.hero .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#aeb4e0;margin:0 0 10px}
-.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:600;font-size:34px;line-height:1.15;margin:0 0 14px}
-.hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:#d8dbf2}
-.hero .meta b{color:#fff;font-weight:600}
+.hero{background:linear-gradient(135deg,#ffd9e2 0%,#ffc8d6 42%,#e9cdf7 100%);
+  color:var(--ink);margin:0 -18px 26px;padding:46px 28px 36px;position:relative;overflow:hidden;
+  border-radius:0 0 30px 30px;box-shadow:0 18px 36px -26px rgba(231,106,141,.7)}
+.hero::after{content:"";position:absolute;right:-50px;top:-50px;width:190px;height:190px;
+  border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.75),transparent 70%)}
+.hero::before{content:"";position:absolute;left:-30px;bottom:-40px;width:130px;height:130px;
+  border-radius:50%;background:radial-gradient(circle,rgba(185,167,230,.55),transparent 70%)}
+.hero .eyebrow{font-size:12px;letter-spacing:.22em;color:var(--pink-d);margin:0 0 8px;font-weight:700}
+.hero h1{font-weight:800;font-size:33px;line-height:1.2;margin:0 0 14px;letter-spacing:.01em;
+  text-shadow:0 1px 0 rgba(255,255,255,.6)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px}
+.hero .meta span{background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.9);
+  border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;backdrop-filter:blur(2px)}
+.hero .meta b{font-weight:800}
 
 /* section */
 .sec{margin:34px 0 0}
-.sec > h2{display:flex;align-items:baseline;gap:10px;font-size:13px;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--ink-2);margin:0 0 14px;font-weight:700}
-.sec > h2::before{content:"";flex:0 0 22px;height:2px;background:var(--coral);transform:translateY(-4px)}
+.sec > h2{display:flex;align-items:center;gap:9px;font-size:17px;color:var(--ink);
+  margin:0 0 14px;font-weight:800;letter-spacing:.02em}
+.sec > h2::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--pink);
+  box-shadow:0 0 0 4px rgba(255,143,171,.22)}
 
-/* ticket card */
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
-  box-shadow:var(--shadow);padding:16px 18px;margin:0 0 14px;position:relative}
-.card::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:4px;border-radius:4px;background:var(--coral)}
-.card.hotel::before{background:var(--teal)} .card.place::before{background:var(--gold)}
-.card .title{font-weight:700;font-size:17px;margin:0 0 2px;padding-left:8px}
-.card .sub{color:var(--muted);font-size:13.5px;margin:0 0 10px;padding-left:8px}
-.row{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14px;padding-left:8px;margin:2px 0}
-.row .k{color:var(--muted);min-width:78px}
-.row .v{font-weight:500}
-.code{display:inline-block;background:#f1eee6;border:1px solid var(--line);border-radius:6px;
-  padding:1px 7px;font-size:13px}
+/* cards */
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:20px;
+  box-shadow:var(--shadow);padding:16px 18px 16px 20px;margin:0 0 14px;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;
+  background:linear-gradient(var(--pink),var(--peach))}
+.card.hotel::before{background:linear-gradient(var(--mint),#bfeede)}
+.card.place::before{background:linear-gradient(var(--lav),#d9ccf6)}
+.card .title{font-weight:800;font-size:17.5px;margin:0 0 2px;padding-left:6px}
+.card .sub{color:var(--ink-soft);font-size:13.5px;margin:0 0 10px;padding-left:6px}
+.row{display:flex;flex-wrap:wrap;gap:2px 14px;font-size:14px;padding-left:6px;margin:3px 0}
+.row .k{color:var(--ink-soft);min-width:80px}
+.row .v{font-weight:600}
+.code{display:inline-block;background:#fff0f4;border:1px solid #ffd6e2;color:var(--pink-d);
+  border-radius:8px;padding:1px 8px;font-size:13px;font-weight:700}
 
 /* chips */
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 2px;padding-left:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:13px 0 2px;padding-left:6px}
 .chip{display:inline-flex;align-items:center;gap:6px;text-decoration:none;
-  border:1px solid var(--coral);color:var(--coral-d);background:#fff;
-  border-radius:999px;padding:7px 13px;font-size:13px;font-weight:600;transition:background .15s,color .15s}
-.chip:hover,.chip:focus-visible{background:var(--coral);color:#fff}
-.chip.teal{border-color:var(--teal);color:var(--teal)} .chip.teal:hover,.chip.teal:focus-visible{background:var(--teal);color:#fff}
-.chip.ink{border-color:var(--ink-2);color:var(--ink-2)} .chip.ink:hover,.chip.ink:focus-visible{background:var(--ink-2);color:#fff}
+  border:1.5px solid var(--pink);color:var(--pink-d);background:#fff5f8;
+  border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;
+  transition:transform .12s,background .15s,color .15s}
+.chip:hover,.chip:focus-visible{background:var(--pink);color:#fff;transform:translateY(-1px)}
+.chip.teal{border-color:var(--mint);color:var(--mint-d);background:#f1fbf7}
+.chip.teal:hover,.chip.teal:focus-visible{background:var(--mint);color:#fff}
+.chip.ink{border-color:var(--lav);color:var(--lav-d);background:#f6f2fd}
+.chip.ink:hover,.chip.ink:focus-visible{background:var(--lav);color:#fff}
 
-.badge{display:inline-block;background:#fde7e2;color:var(--coral-d);border:1px solid #f6c9bd;
-  border-radius:6px;padding:1px 8px;font-size:12px;font-weight:700;margin-left:6px}
-.note{color:var(--muted);font-size:13px;padding-left:8px;margin-top:8px}
-.empty{color:var(--muted);font-size:14px;font-style:italic;padding-left:8px}
-.foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
-  color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:space-between}
-a:focus-visible,.chip:focus-visible{outline:2px solid var(--ink-2);outline-offset:2px}
-@media (max-width:480px){.hero h1{font-size:27px}.wrap{padding:0 14px 56px}.hero{padding:34px 18px 28px;margin:0 -14px 24px}}
+.badge{display:inline-block;background:#fff0c6;color:#b6892b;border:1px solid #ffe39a;
+  border-radius:999px;padding:1px 10px;font-size:12px;font-weight:800;margin-left:8px}
+.note{color:var(--ink-soft);font-size:13px;padding-left:6px;margin-top:8px;
+  background:#fffaf6;border-radius:10px;padding:7px 10px;display:inline-block}
+.empty{color:var(--ink-soft);font-size:14px;padding-left:6px}
+.foot{margin-top:42px;padding-top:18px;border-top:1.5px dashed var(--line);
+  color:var(--ink-soft);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:space-between}
+a:focus-visible,.chip:focus-visible{outline:2px solid var(--lav-d);outline-offset:2px}
+@media (max-width:480px){.hero h1{font-size:27px}.wrap{padding:0 14px 60px}.hero{padding:36px 18px 30px;margin:0 -14px 22px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -71,8 +89,8 @@ a:focus-visible,.chip:focus-visible{outline:2px solid var(--ink-2);outline-offse
 <header class="hero">
   <p class="eyebrow">Travel Itinerary</p>
   <h1>東京 2026年7月</h1>
-  <div class="meta"><span><b>2026-07-03 – 2026-07-05</b></span><span>1名</span><span>TZ Asia/Tokyo</span><span>JPY</span></div>
-  <div class="chips" style="padding-left:0;margin-top:16px"><a class="chip" download="trip.ics" href="data:text/calendar;base64,QkVHSU46VkNBTEVOREFSDQpWRVJTSU9OOjIuMA0KUFJPRElEOi0vL3NoaW9yaV9nZW4vL0pQLy8xLjAvL0VODQpDQUxTQ0FMRTpHUkVHT1JJQU4NCkJFR0lOOlZFVkVOVA0KVUlEOmZsaWdodC0xQHNoaW9yaQ0KRFRTVEFNUDoyMDI2MDYzMFQxNDM4MDVaDQpEVFNUQVJUOjIwMjYwNzAzVDA4MDUwMFoNClNVTU1BUlk64pyIIE5INzU2IOWHuueZuiDlsI/mnb7ihpLmnbHkuqwo576955SwKQ0KTE9DQVRJT0465bCP5p2+DQpFTkQ6VkVWRU5UDQpCRUdJTjpWRVZFTlQNClVJRDpmbGlnaHQtMkBzaGlvcmkNCkRUU1RBTVA6MjAyNjA2MzBUMTQzODA1Wg0KRFRTVEFSVDoyMDI2MDcwM1QwOTI1MDBaDQpTVU1NQVJZOuKciCBOSDc1NiDliLDnnYAg5bCP5p2+4oaS5p2x5LqsKOe+veeUsCkNCkxPQ0FUSU9OOuadseS6rCjnvr3nlLApDQpFTkQ6VkVWRU5UDQpCRUdJTjpWRVZFTlQNClVJRDpmbGlnaHQtM0BzaGlvcmkNCkRUU1RBTVA6MjAyNjA2MzBUMTQzODA1Wg0KRFRTVEFSVDoyMDI2MDcwNVQwMDQ1MDBaDQpTVU1NQVJZOuKciCBOSDc1MyDlh7rnmbog5p2x5LqsKOe+veeUsCnihpLlsI/mnb4NCkxPQ0FUSU9OOuadseS6rCjnvr3nlLApDQpFTkQ6VkVWRU5UDQpCRUdJTjpWRVZFTlQNClVJRDpmbGlnaHQtNEBzaGlvcmkNCkRUU1RBTVA6MjAyNjA2MzBUMTQzODA1Wg0KRFRTVEFSVDoyMDI2MDcwNVQwMTQ1MDBaDQpTVU1NQVJZOuKciCBOSDc1MyDliLDnnYAg5p2x5LqsKOe+veeUsCnihpLlsI/mnb4NCkxPQ0FUSU9OOuWwj+advg0KRU5EOlZFVkVOVA0KQkVHSU46VkVWRU5UDQpVSUQ6aG90ZWwtNUBzaGlvcmkNCkRUU1RBTVA6MjAyNjA2MzBUMTQzODA1Wg0KRFRTVEFSVDoyMDI2MDcwM1QwNjAwMDBaDQpTVU1NQVJZOvCfj6ggQUPjg5vjg4bjg6vmnbHkuqzpioDluqcg44OB44Kn44OD44Kv44Kk44OzDQpMT0NBVElPTjrjgJIxMDQtMDA2MSDmnbHkuqzpg73kuK3lpK7ljLrpioDluqc2LTE0LTcNCkVORDpWRVZFTlQNCkJFR0lOOlZFVkVOVA0KVUlEOmhvdGVsLTZAc2hpb3JpDQpEVFNUQU1QOjIwMjYwNjMwVDE0MzgwNVoNCkRUU1RBUlQ6MjAyNjA3MDRUMDIwMDAwWg0KU1VNTUFSWTrwn4+oIEFD44Ob44OG44Or5p2x5Lqs6YqA5bqnIOODgeOCp+ODg+OCr+OCouOCpuODiA0KTE9DQVRJT04644CSMTA0LTAwNjEg5p2x5Lqs6YO95Lit5aSu5Yy66YqA5bqnNi0xNC03DQpFTkQ6VkVWRU5UDQpCRUdJTjpWRVZFTlQNClVJRDpob3RlbC03QHNoaW9yaQ0KRFRTVEFNUDoyMDI2MDYzMFQxNDM4MDVaDQpEVFNUQVJUOjIwMjYwNzA0VDA2MDAwMFoNClNVTU1BUlk68J+PqCBBQ+ODm+ODhuODq+adseS6rOmKgOW6pyDjg4Hjgqfjg4Pjgq/jgqTjg7MNCkxPQ0FUSU9OOuOAkjEwNC0wMDYxIOadseS6rOmDveS4reWkruWMuumKgOW6pzYtMTQtNw0KRU5EOlZFVkVOVA0KQkVHSU46VkVWRU5UDQpVSUQ6aG90ZWwtOEBzaGlvcmkNCkRUU1RBTVA6MjAyNjA2MzBUMTQzODA1Wg0KRFRTVEFSVDoyMDI2MDcwNVQwMjAwMDBaDQpTVU1NQVJZOvCfj6ggQUPjg5vjg4bjg6vmnbHkuqzpioDluqcg44OB44Kn44OD44Kv44Ki44Km44OIDQpMT0NBVElPTjrjgJIxMDQtMDA2MSDmnbHkuqzpg73kuK3lpK7ljLrpioDluqc2LTE0LTcNCkVORDpWRVZFTlQNCkJFR0lOOlZFVkVOVA0KVUlEOnBsYWNlLTlAc2hpb3JpDQpEVFNUQU1QOjIwMjYwNjMwVDE0MzgwNVoNCkRUU1RBUlQ6MjAyNjA3MDNUMTAzMDAwWg0KU1VNTUFSWTrwn5ONIOaXpeWQkemFkiBISU5BVEFaQUtBDQpMT0NBVElPTjrml6XlkJHphZIgSElOQVRBWkFLQSDmnbHkuqzpg73lj7DmnbHljLrkuInnrYvvvJLkuIHnm67vvJTiiJLvvJINCkRFU0NSSVBUSU9OOuOAkjExMS0wMDU1IOadseS6rOmDveWPsOadseWMuuS4ieeti++8kuS4geebru+8lOKIku+8kiAvIDPml6XlpJwNCkVORDpWRVZFTlQNCkJFR0lOOlZFVkVOVA0KVUlEOnBsYWNlLTEwQHNoaW9yaQ0KRFRTVEFNUDoyMDI2MDYzMFQxNDM4MDVaDQpEVFNUQVJUOjIwMjYwNzA0VDA0MDAwMFoNClNVTU1BUlk68J+TjSDjgZXjgY/jgonjg5Djgrnjg4jjgq/jg6rjg4vjg4Pjgq8NCkxPQ0FUSU9OOuOBleOBj+OCieODkOOCueODiOOCr+ODquODi+ODg+OCryDmnbHkuqzpg73mlrDlrr/ljLropb/mlrDlrr/vvJfkuIHnm67vvJHvvJDiiJLvvJHvvJgNCkRFU0NSSVBUSU9OOuOAkjE2MC0wMDIzIOadseS6rOmDveaWsOWuv+WMuuilv+aWsOWuv++8l+S4geebru+8ke+8kOKIku+8ke+8mCAvIDTml6XljYjlvowNCkVORDpWRVZFTlQNCkVORDpWQ0FMRU5EQVINCg==">カレンダーに追加 (.ics)</a></div>
+  <div class="meta"><span><b>2026-07-03 – 2026-07-05</b></span><span>2名</span><span>TZ Asia/Tokyo</span><span>JPY</span></div>
+  <div class="chips" style="padding-left:0;margin-top:16px"><a class="chip" download="trip.ics" href="data:text/calendar;base64,QkVHSU46VkNBTEVOREFSDQpWRVJTSU9OOjIuMA0KUFJPRElEOi0vL3NoaW9yaV9nZW4vL0pQLy8xLjAvL0VODQpDQUxTQ0FMRTpHUkVHT1JJQU4NCkJFR0lOOlZFVkVOVA0KVUlEOmZsaWdodC0xQHNoaW9yaQ0KRFRTVEFNUDoyMDI2MDYzMFQxNTA2MzZaDQpEVFNUQVJUOjIwMjYwNzAzVDA4MDUwMFoNClNVTU1BUlk64pyIIE5INzU2IOWHuueZuiDlsI/mnb7ihpLmnbHkuqwo576955SwKQ0KTE9DQVRJT0465bCP5p2+DQpFTkQ6VkVWRU5UDQpCRUdJTjpWRVZFTlQNClVJRDpmbGlnaHQtMkBzaGlvcmkNCkRUU1RBTVA6MjAyNjA2MzBUMTUwNjM2Wg0KRFRTVEFSVDoyMDI2MDcwM1QwOTI1MDBaDQpTVU1NQVJZOuKciCBOSDc1NiDliLDnnYAg5bCP5p2+4oaS5p2x5LqsKOe+veeUsCkNCkxPQ0FUSU9OOuadseS6rCjnvr3nlLApDQpFTkQ6VkVWRU5UDQpCRUdJTjpWRVZFTlQNClVJRDpmbGlnaHQtM0BzaGlvcmkNCkRUU1RBTVA6MjAyNjA2MzBUMTUwNjM2Wg0KRFRTVEFSVDoyMDI2MDcwNVQwMDQ1MDBaDQpTVU1NQVJZOuKciCBOSDc1MyDlh7rnmbog5p2x5LqsKOe+veeUsCnihpLlsI/mnb4NCkxPQ0FUSU9OOuadseS6rCjnvr3nlLApDQpFTkQ6VkVWRU5UDQpCRUdJTjpWRVZFTlQNClVJRDpmbGlnaHQtNEBzaGlvcmkNCkRUU1RBTVA6MjAyNjA2MzBUMTUwNjM2Wg0KRFRTVEFSVDoyMDI2MDcwNVQwMTQ1MDBaDQpTVU1NQVJZOuKciCBOSDc1MyDliLDnnYAg5p2x5LqsKOe+veeUsCnihpLlsI/mnb4NCkxPQ0FUSU9OOuWwj+advg0KRU5EOlZFVkVOVA0KQkVHSU46VkVWRU5UDQpVSUQ6aG90ZWwtNUBzaGlvcmkNCkRUU1RBTVA6MjAyNjA2MzBUMTUwNjM2Wg0KRFRTVEFSVDoyMDI2MDcwM1QwNjAwMDBaDQpTVU1NQVJZOvCfj6ggQUPjg5vjg4bjg6vmnbHkuqzpioDluqcg44OB44Kn44OD44Kv44Kk44OzDQpMT0NBVElPTjrjgJIxMDQtMDA2MSDmnbHkuqzpg73kuK3lpK7ljLrpioDluqc2LTE0LTcNCkVORDpWRVZFTlQNCkJFR0lOOlZFVkVOVA0KVUlEOmhvdGVsLTZAc2hpb3JpDQpEVFNUQU1QOjIwMjYwNjMwVDE1MDYzNloNCkRUU1RBUlQ6MjAyNjA3MDRUMDIwMDAwWg0KU1VNTUFSWTrwn4+oIEFD44Ob44OG44Or5p2x5Lqs6YqA5bqnIOODgeOCp+ODg+OCr+OCouOCpuODiA0KTE9DQVRJT04644CSMTA0LTAwNjEg5p2x5Lqs6YO95Lit5aSu5Yy66YqA5bqnNi0xNC03DQpFTkQ6VkVWRU5UDQpCRUdJTjpWRVZFTlQNClVJRDpob3RlbC03QHNoaW9yaQ0KRFRTVEFNUDoyMDI2MDYzMFQxNTA2MzZaDQpEVFNUQVJUOjIwMjYwNzA0VDA2MDAwMFoNClNVTU1BUlk68J+PqCBBQ+ODm+ODhuODq+adseS6rOmKgOW6pyDjg4Hjgqfjg4Pjgq/jgqTjg7MNCkxPQ0FUSU9OOuOAkjEwNC0wMDYxIOadseS6rOmDveS4reWkruWMuumKgOW6pzYtMTQtNw0KRU5EOlZFVkVOVA0KQkVHSU46VkVWRU5UDQpVSUQ6aG90ZWwtOEBzaGlvcmkNCkRUU1RBTVA6MjAyNjA2MzBUMTUwNjM2Wg0KRFRTVEFSVDoyMDI2MDcwNVQwMjAwMDBaDQpTVU1NQVJZOvCfj6ggQUPjg5vjg4bjg6vmnbHkuqzpioDluqcg44OB44Kn44OD44Kv44Ki44Km44OIDQpMT0NBVElPTjrjgJIxMDQtMDA2MSDmnbHkuqzpg73kuK3lpK7ljLrpioDluqc2LTE0LTcNCkVORDpWRVZFTlQNCkJFR0lOOlZFVkVOVA0KVUlEOnBsYWNlLTlAc2hpb3JpDQpEVFNUQU1QOjIwMjYwNjMwVDE1MDYzNloNCkRUU1RBUlQ6MjAyNjA3MDNUMTAzMDAwWg0KU1VNTUFSWTrwn5ONIOaXpeWQkemFkiBISU5BVEFaQUtBDQpMT0NBVElPTjrml6XlkJHphZIgSElOQVRBWkFLQSDmnbHkuqzpg73lj7DmnbHljLrkuInnrYvvvJLkuIHnm67vvJTiiJLvvJINCkRFU0NSSVBUSU9OOuOAkjExMS0wMDU1IOadseS6rOmDveWPsOadseWMuuS4ieeti++8kuS4geebru+8lOKIku+8kiAvIDPml6XlpJwNCkVORDpWRVZFTlQNCkJFR0lOOlZFVkVOVA0KVUlEOnBsYWNlLTEwQHNoaW9yaQ0KRFRTVEFNUDoyMDI2MDYzMFQxNTA2MzZaDQpEVFNUQVJUOjIwMjYwNzA0VDA0MDAwMFoNClNVTU1BUlk68J+TjSDjgZXjgY/jgonjg5Djgrnjg4jjgq/jg6rjg4vjg4Pjgq8NCkxPQ0FUSU9OOuOBleOBj+OCieODkOOCueODiOOCr+ODquODi+ODg+OCryDmnbHkuqzpg73mlrDlrr/ljLropb/mlrDlrr/vvJfkuIHnm67vvJHvvJDiiJLvvJHvvJgNCkRFU0NSSVBUSU9OOuOAkjE2MC0wMDIzIOadseS6rOmDveaWsOWuv+WMuuilv+aWsOWuv++8l+S4geebru+8ke+8kOKIku+8ke+8mCAvIDTml6XljYjlvowNCkVORDpWRVZFTlQNCkVORDpWQ0FMRU5EQVINCg==">カレンダーに追加 (.ics)</a></div>
 </header>
 <main class="wrap">
 <section class="sec"><h2>Flights ✈</h2><div class="card flight"><div class="title"><span class="code mono">NH756</span></div><div class="sub">ANAウイングス / ANA特典 国内特典エコノミー</div><div class="row"><span class="k">区間</span><span class="v">小松 → 東京(羽田)</span></div><div class="row"><span class="k">出発</span><span class="v">2026-07-03 17:05</span></div><div class="row"><span class="k">到着</span><span class="v">2026-07-03 18:25</span></div><div class="row"><span class="k">PNR</span><span class="v code mono">FFK9KK</span></div></div><div class="card flight"><div class="title"><span class="code mono">NH753</span></div><div class="sub">ANAウイングス / ANA特典 国内特典エコノミー</div><div class="row"><span class="k">区間</span><span class="v">東京(羽田) → 小松</span></div><div class="row"><span class="k">出発</span><span class="v">2026-07-05 09:45</span></div><div class="row"><span class="k">到着</span><span class="v">2026-07-05 10:45</span></div><div class="row"><span class="k">PNR</span><span class="v code mono">FFK9KK</span></div></div></section><section class="sec"><h2>Hotels 🏨</h2><div class="card hotel"><div class="title">ACホテル東京銀座</div><div class="sub">〒104-0061 東京都中央区銀座6-14-7</div><div class="row"><span class="k">IN</span><span class="v">2026-07-03 15:00</span></div><div class="row"><span class="k">OUT</span><span class="v">2026-07-04 11:00</span></div><div class="row"><span class="k">予約番号</span><span class="v code mono">73188685</span></div><div class="row"><span class="k">電話</span><span class="v">+81355500102</span></div><div class="note">スタンダード 客室 1キング / 1大人</div><div class="chips"><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=35.668985%2C139.765361" target="_blank" rel="noopener">地図</a><a class="chip ink" href="https://www.google.com/maps/search/?api=1&amp;query=AC%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E4%BA%AC%E9%8A%80%E5%BA%A7%20%E5%B1%85%E9%85%92%E5%B1%8B" target="_blank" rel="noopener">周辺の居酒屋</a><a class="chip ink" href="https://www.google.com/maps/search/?api=1&amp;query=AC%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E4%BA%AC%E9%8A%80%E5%BA%A7%20%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2%E3%83%B3" target="_blank" rel="noopener">周辺のイタリアン</a><a class="chip ink" href="https://www.google.com/maps/search/?api=1&amp;query=AC%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E4%BA%AC%E9%8A%80%E5%BA%A7%20%E5%92%8C%E9%A3%9F" target="_blank" rel="noopener">周辺の和食</a></div></div><div class="card hotel"><div class="title">ACホテル東京銀座</div><div class="sub">〒104-0061 東京都中央区銀座6-14-7</div><div class="row"><span class="k">IN</span><span class="v">2026-07-04 15:00</span></div><div class="row"><span class="k">OUT</span><span class="v">2026-07-05 11:00</span></div><div class="row"><span class="k">予約番号</span><span class="v code mono">73547014</span></div><div class="row"><span class="k">電話</span><span class="v">+81355500102</span></div><div class="note">スタンダード 客室 2シングル / 1大人</div><div class="chips"><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=35.668985%2C139.765361" target="_blank" rel="noopener">地図</a><a class="chip ink" href="https://www.google.com/maps/search/?api=1&amp;query=AC%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E4%BA%AC%E9%8A%80%E5%BA%A7%20%E5%B1%85%E9%85%92%E5%B1%8B" target="_blank" rel="noopener">周辺の居酒屋</a><a class="chip ink" href="https://www.google.com/maps/search/?api=1&amp;query=AC%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E4%BA%AC%E9%8A%80%E5%BA%A7%20%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2%E3%83%B3" target="_blank" rel="noopener">周辺のイタリアン</a><a class="chip ink" href="https://www.google.com/maps/search/?api=1&amp;query=AC%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E4%BA%AC%E9%8A%80%E5%BA%A7%20%E5%92%8C%E9%A3%9F" target="_blank" rel="noopener">周辺の和食</a></div></div></section><section class="sec"><h2>Places 📍</h2><div class="card place"><div class="title">日向酒 HINATAZAKA</div><div class="sub">食事</div><div class="row"><span class="k">予定</span><span class="v">2026-07-03 19:30</span></div><div class="row"><span class="k">滞在(分)</span><span class="v">120</span></div><div class="note">〒111-0055 東京都台東区三筋２丁目４−２ / 3日夜</div><div class="chips"><a class="chip " href="https://www.google.com/maps/dir/?api=1&amp;destination=%E6%97%A5%E5%90%91%E9%85%92%20HINATAZAKA%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8F%B0%E6%9D%B1%E5%8C%BA%E4%B8%89%E7%AD%8B%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%94%E2%88%92%EF%BC%92&amp;origin=AC%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E4%BA%AC%E9%8A%80%E5%BA%A7" target="_blank" rel="noopener">経路</a><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A5%E5%90%91%E9%85%92%20HINATAZAKA%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8F%B0%E6%9D%B1%E5%8C%BA%E4%B8%89%E7%AD%8B%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%94%E2%88%92%EF%BC%92" target="_blank" rel="noopener">地図</a></div></div><div class="card place"><div class="title">さくらバストクリニック</div><div class="sub">その他</div><div class="row"><span class="k">予定</span><span class="v">2026-07-04 13:00</span></div><div class="note">〒160-0023 東京都新宿区西新宿７丁目１０−１８ / 4日午後</div><div class="chips"><a class="chip " href="https://www.google.com/maps/dir/?api=1&amp;destination=%E3%81%95%E3%81%8F%E3%82%89%E3%83%90%E3%82%B9%E3%83%88%E3%82%AF%E3%83%AA%E3%83%8B%E3%83%83%E3%82%AF%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%96%B0%E5%AE%BF%EF%BC%97%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%90%E2%88%92%EF%BC%91%EF%BC%98&amp;origin=AC%E3%83%9B%E3%83%86%E3%83%AB%E6%9D%B1%E4%BA%AC%E9%8A%80%E5%BA%A7" target="_blank" rel="noopener">経路</a><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%95%E3%81%8F%E3%82%89%E3%83%90%E3%82%B9%E3%83%88%E3%82%AF%E3%83%AA%E3%83%8B%E3%83%83%E3%82%AF%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%96%B0%E5%AE%BF%EF%BC%97%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%90%E2%88%92%EF%BC%91%EF%BC%98" target="_blank" rel="noopener">地図</a></div></div></section><section class="sec"><h2>Dining 🍶</h2><div class="card"><div class="title">日向酒 HINATAZAKA<span class="badge">要直前確認</span></div><div class="sub">居酒屋</div><div class="chips"><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%97%A5%E5%90%91%E9%85%92%20HINATAZAKA%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8F%B0%E6%9D%B1%E5%8C%BA%E4%B8%89%E7%AD%8B%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%94%E2%88%92%EF%BC%92" target="_blank" rel="noopener">地図検索</a></div></div><div class="card"><div class="title">銀座周辺 居酒屋<span class="badge">要直前確認</span></div><div class="sub">居酒屋</div><div class="chips"><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8A%80%E5%BA%A7%20%E5%B1%85%E9%85%92%E5%B1%8B" target="_blank" rel="noopener">地図検索</a></div></div><div class="card"><div class="title">銀座周辺 イタリアン<span class="badge">要直前確認</span></div><div class="sub">イタリアン</div><div class="chips"><a class="chip teal" href="https://www.google.com/maps/search/?api=1&amp;query=%E9%8A%80%E5%BA%A7%20%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2%E3%83%B3" target="_blank" rel="noopener">地図検索</a></div></div></section>
