@@ -1,0 +1,110 @@
+{
+  "trip": {
+    "trip_title": "東京 2026年7月",
+    "travelers": "1名",
+    "start_date": "2026-07-03",
+    "end_date": "2026-07-05",
+    "timezone": "Asia/Tokyo",
+    "currency": "JPY",
+    "emergency_contact": ""
+  },
+  "flights": [
+    {
+      "flight_no": "NH756",
+      "airline": "ANAウイングス / ANA特典 国内特典エコノミー",
+      "dep_airport": "小松",
+      "arr_airport": "東京(羽田)",
+      "dep_datetime": "2026-07-03 17:05",
+      "arr_datetime": "2026-07-03 18:25",
+      "pnr": "FFK9KK",
+      "seat": "",
+      "terminal_gate": "",
+      "note": ""
+    },
+    {
+      "flight_no": "NH753",
+      "airline": "ANAウイングス / ANA特典 国内特典エコノミー",
+      "dep_airport": "東京(羽田)",
+      "arr_airport": "小松",
+      "dep_datetime": "2026-07-05 09:45",
+      "arr_datetime": "2026-07-05 10:45",
+      "pnr": "FFK9KK",
+      "seat": "",
+      "terminal_gate": "",
+      "note": ""
+    }
+  ],
+  "hotels": [
+    {
+      "name": "ACホテル東京銀座",
+      "address": "〒104-0061 東京都中央区銀座6-14-7",
+      "checkin_datetime": "2026-07-03 15:00",
+      "checkout_datetime": "2026-07-04 11:00",
+      "booking_no": "73188685",
+      "phone": "+81355500102",
+      "lat": "35.668985",
+      "lng": "139.765361",
+      "nearby_food_keywords": ["居酒屋", "イタリアン", "和食"],
+      "note": "スタンダード 客室 1キング / 1大人"
+    },
+    {
+      "name": "ACホテル東京銀座",
+      "address": "〒104-0061 東京都中央区銀座6-14-7",
+      "checkin_datetime": "2026-07-04 15:00",
+      "checkout_datetime": "2026-07-05 11:00",
+      "booking_no": "73547014",
+      "phone": "+81355500102",
+      "lat": "35.668985",
+      "lng": "139.765361",
+      "nearby_food_keywords": ["居酒屋", "イタリアン", "和食"],
+      "note": "スタンダード 客室 2シングル / 1大人"
+    }
+  ],
+  "places": [
+    {
+      "name": "日向酒 HINATAZAKA",
+      "category": "食事",
+      "map_query": "日向酒 HINATAZAKA 東京都台東区三筋２丁目４−２",
+      "lat": null,
+      "lng": null,
+      "planned_datetime": "2026-07-03 19:30",
+      "stay_minutes": 120,
+      "route_from": "ACホテル東京銀座",
+      "note": "〒111-0055 東京都台東区三筋２丁目４−２ / 3日夜"
+    },
+    {
+      "name": "さくらバストクリニック",
+      "category": "その他",
+      "map_query": "さくらバストクリニック 東京都新宿区西新宿７丁目１０−１８",
+      "lat": null,
+      "lng": null,
+      "planned_datetime": "2026-07-04 13:00",
+      "stay_minutes": null,
+      "route_from": "ACホテル東京銀座",
+      "note": "〒160-0023 東京都新宿区西新宿７丁目１０−１８ / 4日午後"
+    }
+  ],
+  "dining": [
+    {
+      "label": "日向酒 HINATAZAKA",
+      "genre": "居酒屋",
+      "map_query": "日向酒 HINATAZAKA 東京都台東区三筋２丁目４−２",
+      "url": "",
+      "status": "要直前確認"
+    },
+    {
+      "label": "銀座周辺 居酒屋",
+      "genre": "居酒屋",
+      "map_query": "銀座 居酒屋",
+      "url": "",
+      "status": "要直前確認"
+    },
+    {
+      "label": "銀座周辺 イタリアン",
+      "genre": "イタリアン",
+      "map_query": "銀座 イタリアン",
+      "url": "",
+      "status": "要直前確認"
+    }
+  ]
+}
